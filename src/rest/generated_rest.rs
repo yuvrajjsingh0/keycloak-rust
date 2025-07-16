@@ -7639,7 +7639,7 @@ impl<TS: KeycloakTokenSupplier> KeycloakAdmin<TS> {
     pub async fn realm_partial_import_post(
         &self,
         realm: &str,
-        body: String,
+        body: Value,
     ) -> Result<Option<TypeString>, KeycloakError> {
         let realm = p(realm);
         let builder = self
